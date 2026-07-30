@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, Barlow, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const barlow_condensed = Barlow_Condensed({
   subsets: ["latin"],
-});
+  variable: "--font-barlow-condensed",
+  display: "swap",
+  weight: ["800"]
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlow = Barlow({
   subsets: ["latin"],
-});
+  variable: "--font-barlow",
+  display: "swap",
+  weight: ["300"]
+})
+
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+  weight: ["400"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +37,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${barlow_condensed.variable} ${barlow.variable} ${jetbrains_mono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
