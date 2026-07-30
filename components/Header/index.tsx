@@ -15,12 +15,12 @@ export function Header() {
     ]
 
     return (
-        <header className="container px-8 py-4.25 flex justify-between items-center">
+        <header className="container px-8 py-4.25 flex justify-between items-center mb-6.75">
             <Link href="/" className="font-heading color-heading text-[20px]">SP</Link>
             <nav className="flex gap-9 items-center font-body color-body">
                 {
                     NAV_LINKS.map(link => (
-                        <Link key={link.label} href={link.href}>
+                        <Link className="font-label text-body tracking-wide" key={link.label} href={link.href}>
                             {link.label.toUpperCase()}
                         </Link>
                     ))
