@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export function Hero() {
     return (
-        <section className="flex justify-center items-start">
+        <section className="flex justify-center items-start mb-40 container">
             <div className="max-width-[580px]">
                 <div className="flex justify-between items-center mb-37.5">
                     <p className="font-label text-muted text-[12px] tracking-wide">[01] FRONTEND ENGINEER</p>
                     <p className="font-label text-muted text-[12px] tracking-wide">48.3794°N 31.1656°E<br />2019 — AVAILABLE</p>
                 </div>
                 <div>
-                    <h1 className="font-heading text-heading text-[200px]/[171px] tracking-tight mb-3">SERHII<br />PIATKO</h1>
+                    <h1 className="font-heading font-extrabold text-heading text-[200px]/[171px] tracking-tight mb-3">SERHII<br />PIATKO</h1>
                     <div className="flex items-baseline gap-4 mb-10">
                         <p className="font-label text-muted text-[12px] tracking-wide">BUILDING DIGITAL</p>
                         <p className="font-body text-body text-[19px] ">Frontend-focused full-stack developer working across web, mobile,<br />
@@ -21,7 +21,7 @@ export function Hero() {
                             <div className="flex items-center gap-2.5 mb-8">
                                 <Link className="bg-surface-dark px-6 py-3.5 inline-flex" href="/">
                                     <span className="flex justify-center items-center gap-2.5">
-                                        <p className="font-label text-on-dark text-[12px] tracking-wide">SELECTED WORK</p>
+                                        <p className="font-label text-on-dark-heading text-[12px] tracking-wide">SELECTED WORK</p>
                                         <Image
                                             src="/icons/arrow_down.svg"
                                             width={7}

@@ -1,29 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #EAE7DF;
+  --background: #F2EFE7;
+  --background-secondary: #EAE7DF;
   --text-heading: #111111;
   --text-body: #3F3E39;
   --text-muted: #7A7871;
   --accent: #B7FF3C;
-  --on-dark: #F2EFE7;
+  --on-dark-heading: #F2EFE7;
+  --on-dark-subheading: rgba(242, 239, 231, 0.5);
+  --on-dark-body: rgba(242, 239, 231, 0.6);
   --surface-dark: #111111;
 
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-heading: var(--text-heading);
   --color-body: var(--text-body);
   --color-muted: var(--text-muted);
   --color-accent: var(--accent);
-  --color-on-dark: var(--on-dark);
+
+  --color-on-dark-heading: var(--on-dark-heading);
+  --color-on-dark-subheading: var(--on-dark-subheading);
+  --color-on-dark-body: var(--on-dark-body);
   --color-surface-dark: var(--surface-dark);
 
   --font-heading: var(--font-barlow-condensed);
   --font-body: var(--font-barlow);
   --font-label: var(--font-jetbrains-mono);
 }
+
+@layer base {
+  p {
+    margin: 0;
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -38,9 +52,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p{
-  margin: 0;
-}
 
 .container {
   width: 100%;

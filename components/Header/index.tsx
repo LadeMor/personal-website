@@ -8,7 +8,7 @@ type NavLink = {
 export function Header() {
 
     const NAV_LINKS: NavLink[] = [
-        { label: "Work", href: "/" },
+        { label: "Work", href: "/works" },
         { label: "About", href: "/" },
         { label: "Experience", href: "/" },
         { label: "Contact", href: "/" },
@@ -16,7 +16,7 @@ export function Header() {
 
     return (
         <header className="container px-8 py-4.25 flex justify-between items-center mb-6.75">
-            <Link href="/" className="font-heading color-heading text-[20px]">SP</Link>
+            <Link href="/" className="font-heading color-heading text-[20px] font-extrabold">SP</Link>
             <nav className="flex gap-9 items-center font-body color-body">
                 {
                     NAV_LINKS.map(link => (
