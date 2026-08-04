@@ -11,16 +11,11 @@ const socialLinks = [
         value: "Serhii Piatko",
         href: "https://www.linkedin.com/",
     },
-    {
-        label: "Twitter / X",
-        value: "@serhiipiatko",
-        href: "https://x.com/serhiipiatko",
-    },
 ];
 
 export function Contact() {
     return (
-        <section className="bg-background-secondary">
+        <section id="contact" className="bg-background-secondary">
             <div className="container px-10 pt-24 pb-18 border-t border-t-muted">
                 <div className="mb-16">
                     <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-11">Contact</p>
@@ -34,8 +29,8 @@ export function Contact() {
                     <div className="pt-2">
                         <div className="mb-12">
                             <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-5">Email</p>
-                            <Link href="mailto:serhii@piatko.dev" className="font-heading text-heading text-[44px]/[48px] tracking-tight font-extrabold">
-                                serhii@piatko.dev
+                            <Link href="mailto:sergpyatko@gmail.com" className="font-heading text-heading text-[44px]/[48px] tracking-tight font-extrabold">
+                                sergpyatko@gmail.com
                             </Link>
                         </div>
 

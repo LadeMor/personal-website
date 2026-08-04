@@ -32,7 +32,7 @@ const careerItems = [
 
 export function Experience() {
     return (
-        <section className="bg-background-secondary">
+        <section id="experience" className="bg-background-secondary">
             <div className="container px-10 pt-24 pb-8">
                 <div className="mb-10">
                     <p className="font-label text-muted text-[12px] tracking-wide uppercase mb-5">Career / Selected Experience</p>
@@ -79,11 +79,6 @@ export function Experience() {
                                             </div>
                                         ))}
                                     </div>
-                                </td>
-                                <td className="align-top py-10 text-right">
-                                    <Link href="/" className="font-label text-heading text-[18px]/[18px]" aria-label={`View ${item.company} experience`}>
-                                        →
-                                    </Link>
                                 </td>
                             </tr>
                         ))}

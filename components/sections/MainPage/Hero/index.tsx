@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
     return (
-        <section className="flex justify-center items-start mb-40 container">
+        <section className="flex justify-center items-start mb-40 mt-10 container">
             <div className="max-width-[580px]">
                 <div className="flex justify-between items-center mb-37.5">
                     <p className="font-label text-muted text-[12px] tracking-wide">[01] FRONTEND ENGINEER</p>

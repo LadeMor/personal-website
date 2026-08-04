@@ -33,6 +33,14 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 84px;
+  }
+
   p {
     margin: 0;
   }

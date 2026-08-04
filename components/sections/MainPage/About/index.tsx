@@ -18,7 +18,7 @@ const experienceStats = [
 
 export function About() {
     return (
-        <section className="bg-background-secondary">
+        <section id="about" className="bg-background-secondary">
             <div className="container px-10 pt-24 pb-32">
                 <div className="flex items-center justify-between border-b border-b-muted pb-6 mb-16">
                     <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase">About</p>
