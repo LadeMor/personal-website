@@ -16,57 +16,57 @@ const socialLinks = [
 export function Contact() {
     return (
         <section id="contact" className="bg-background-secondary">
-            <div className="container px-10 pt-24 pb-18 border-t border-t-muted">
-                <div className="mb-16">
-                    <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-11">Contact</p>
-                    <h2 className="font-heading text-heading text-[112px]/[100px] tracking-tight font-extrabold mb-10 max-w-[520px]">
+            <div className="container border-t border-t-muted px-6 pt-18 pb-16 sm:px-10 sm:pt-24 sm:pb-18">
+                <div className="mb-14 sm:mb-16">
+                    <p className="mb-9 font-label text-muted text-[12px] tracking-wide uppercase sm:mb-11">Contact</p>
+                    <h2 className="mb-8 max-w-[520px] font-heading text-heading text-[46px]/[42px] font-extrabold tracking-tight sm:mb-10 sm:text-[76px]/[70px] lg:text-[112px]/[100px]">
                         LET&apos;S BUILD SOMETHING ALIVE
                     </h2>
-                    <div className="w-10 h-px bg-accent"></div>
+                    <div className="h-px w-10 bg-accent"></div>
                 </div>
 
-                <div className="grid grid-cols-[1fr_0.95fr] gap-20 items-start pb-18">
+                <div className="grid grid-cols-1 items-start gap-10 pb-10 lg:grid-cols-[1fr_0.95fr] lg:gap-20 lg:pb-18">
                     <div className="pt-2">
                         <div className="mb-12">
-                            <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-5">Email</p>
-                            <Link href="mailto:sergpyatko@gmail.com" className="font-heading text-heading text-[44px]/[48px] tracking-tight font-extrabold">
+                            <p className="mb-5 font-label text-muted text-[12px] tracking-wide uppercase">Email</p>
+                            <Link href="mailto:sergpyatko@gmail.com" className="font-heading text-heading text-[32px]/[36px] font-extrabold tracking-tight sm:text-[44px]/[48px]">
                                 sergpyatko@gmail.com
                             </Link>
                         </div>
 
                         <div className="max-w-[640px]">
-                            <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-4">Elsewhere</p>
+                            <p className="mb-4 font-label text-muted text-[12px] tracking-wide uppercase">Elsewhere</p>
                             {socialLinks.map((link) => (
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="grid grid-cols-[1fr_auto] border-b border-b-muted py-3"
+                                    className="grid grid-cols-[1fr_auto] gap-4 border-b border-b-muted py-3"
                                 >
                                     <span className="font-label text-muted text-[13px] tracking-wide">{link.label}</span>
-                                    <span className="font-body text-body text-[16px]">{link.value}</span>
+                                    <span className="text-right font-body text-body text-[16px]">{link.value}</span>
                                 </Link>
                             ))}
                         </div>
                     </div>
 
                     <div>
-                        <div className="bg-surface-dark px-10 py-10 mb-6">
-                            <p className="font-label text-on-dark-subheading text-[12px] tracking-[0.45em] uppercase mb-7">Status</p>
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                        <div className="mb-6 bg-surface-dark px-7 py-9 sm:px-10 sm:py-10">
+                            <p className="mb-7 font-label text-on-dark-subheading text-[12px] tracking-wide uppercase">Status</p>
+                            <div className="mb-6 flex items-center gap-3">
+                                <div className="h-2 w-2 rounded-full bg-accent"></div>
                                 <p className="font-body text-on-dark-heading text-[18px]">Available for new projects</p>
                             </div>
-                            <p className="font-body text-on-dark-body text-[15px]/[25px] max-w-[560px] mb-8">
+                            <p className="mb-8 max-w-[560px] font-body text-on-dark-body text-[15px]/[25px]">
                                 Currently open to full-time roles and selected freelance engagements. Based in Berlin, open to remote or hybrid work.
                             </p>
-                            <Link href="/" className="bg-accent px-6 py-4 inline-flex items-center gap-4">
-                                <span className="font-label text-heading text-[12px] tracking-[0.35em] uppercase">Download CV</span>
+                            <Link href="/" className="inline-flex items-center gap-4 bg-accent px-6 py-4">
+                                <span className="font-label text-heading text-[12px] tracking-wide uppercase">Download CV</span>
                                 <span className="font-label text-heading text-[14px]">→</span>
                             </Link>
                         </div>
 
-                        <div className="border border-muted px-8 py-7">
-                            <p className="font-label text-muted text-[12px] tracking-[0.45em] uppercase mb-4">Response Time</p>
+                        <div className="border border-muted px-7 py-7 sm:px-8">
+                            <p className="mb-4 font-label text-muted text-[12px] tracking-wide uppercase">Response Time</p>
                             <p className="font-body text-heading text-[17px]">Usually within 24 hours.</p>
                         </div>
                     </div>

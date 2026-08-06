@@ -10,6 +10,7 @@ export type Work = {
     stack: string[];
     image: string;
     imageAlt: string;
+    interfaceDisplay?: "desktop" | "mobile";
     mobileScreens?: string[];
     overviewTitle: string;
     overviewText: string;
@@ -83,6 +84,7 @@ export const works: Work[] = [
         stack: ["Next.js", "React Native", "Node.js", "PostgreSQL", "AWS"],
         image: "/images/works/service-quotation-app/cover-1.png",
         imageAlt: "Service Quotation App mobile preview",
+        interfaceDisplay: "mobile",
         mobileScreens: [
             "/images/works/service-quotation-app/cover-1.png",
             "/images/works/service-quotation-app/cover-2.png",
@@ -140,6 +142,7 @@ export const works: Work[] = [
         stack: ["React Native", "Expo", "TypeScript"],
         image: "/images/works/gadget-promotion/cover-1.png",
         imageAlt: "Gadget Promotion mobile app preview",
+        interfaceDisplay: "mobile",
         mobileScreens: [
             "/images/works/gadget-promotion/cover-1.png",
             "/images/works/gadget-promotion/cover-2.png",
