@@ -14,9 +14,9 @@ const SLIDE_INTERVAL = 10000;
 
 export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
     const isMobileInterface = work.interfaceDisplay === "mobile";
-    const slides = work.interfaceCaptions.slice(0, 3).map((item) => ({
+    const slides = work.interfaceCaptions.slice(0, 3).map((item, index) => ({
         ...item,
-        image: work.image,
+        image: work.interfaceImages?.[index] ?? work.image,
         alt: `${work.title} ${item.title}`,
     }));
     const mobileScreens = work.mobileScreens?.slice(0, 3) ?? slides.map((slide) => slide.image);
@@ -85,22 +85,22 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-3 items-start gap-6">
                         {slides.map((item, index) => {
                             const isActive = index === activeIndex;
 
                             return (
                                 <button
                                     key={item.title}
-                                    className="group text-left"
+                                    className="group block w-full appearance-none bg-transparent p-0 text-left"
                                     type="button"
                                     aria-pressed={isActive}
                                     aria-label={`Show ${item.title}`}
                                     onClick={() => setActiveIndex(index)}
                                 >
-                                    <div className={`mb-4 border transition-colors ${isActive ? "border-accent" : "border-[rgba(242,239,231,0.12)] group-hover:border-on-dark-subheading"}`}>
+                                    <div className={`mb-4 box-border border border-[rgba(242,239,231,0.12)] transition-colors ${isActive ? "ring-1 ring-inset ring-accent" : "group-hover:border-on-dark-subheading"}`}>
                                         <Image
-                                            className="h-[265px] w-full object-cover"
+                                            className="cursor-pointer block h-[265px] w-full object-cover"
                                             src={item.image}
                                             width={420}
                                             height={265}
@@ -121,7 +121,7 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                     {slides.map((item) => (
                         <div key={item.title}>
                             <Image
-                                className="mb-4 h-auto w-full border border-[rgba(242,239,231,0.16)]"
+                                className=" mb-4 h-auto w-full border border-[rgba(242,239,231,0.16)]"
                                 src={item.image}
                                 width={920}
                                 height={620}

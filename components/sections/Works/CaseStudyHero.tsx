@@ -63,7 +63,7 @@ export function CaseStudyHero({ work }: CaseStudyHeroProps) {
                 <div className="relative min-w-0">
                     {work.mobileScreens ? (
                         <MobileScreensMockup
-                            className="relative z-2 h-[320px] w-full min-w-0 shadow-[0_45px_90px_rgba(17,17,17,0.12)] sm:h-[460px] xl:h-[560px]"
+                            className="relative z-2 h-[320px] w-full min-w-0 sm:h-[460px] xl:h-[560px]"
                             screens={work.mobileScreens}
                             alt={work.imageAlt} />
                     ) : (
