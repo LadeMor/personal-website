@@ -62,13 +62,13 @@ export const works: Work[] = [
       "Chrome Extension",
       "AWS",
     ],
-    image: "/images/works/flamio/cover.png",
+    image: "/images/works/flamio/cover.webp",
     imageAlt: "Flamio UX analysis dashboard and testing interface",
     interfaceImages: [
-      "/images/works/flamio/cover.png",
-      "/images/works/flamio/interface-1.png",
-      "/images/works/flamio/interface-2.png",
-      "/images/works/flamio/interface-3.png",
+      "/images/works/flamio/cover.webp",
+      "/images/works/flamio/interface-1.webp",
+      "/images/works/flamio/interface-2.webp",
+      "/images/works/flamio/interface-3.webp",
     ],
 
     overviewTitle:
@@ -113,16 +113,16 @@ export const works: Work[] = [
       "AWS",
     ],
 
-    image: "/images/works/service-quotation-app/cover-1.png",
+    image: "/images/works/service-quotation-app/cover-1.webp",
     imageAlt:
       "Service Quotation mobile application request, profile and communication screens",
 
     interfaceDisplay: "mobile",
 
     mobileScreens: [
-      "/images/works/service-quotation-app/cover-1.png",
-      "/images/works/service-quotation-app/cover-2.png",
-      "/images/works/service-quotation-app/cover-3.png",
+      "/images/works/service-quotation-app/cover-1.webp",
+      "/images/works/service-quotation-app/cover-2.webp",
+      "/images/works/service-quotation-app/cover-3.webp",
     ],
 
     overviewTitle:
@@ -169,11 +169,12 @@ export const works: Work[] = [
       "WebSockets",
     ],
 
-    image: "/images/works/service-quotation/cover.png",
+    image: "/images/works/service-quotation/cover.webp",
     interfaceImages: [
-      "/images/works/service-quotation/interface-1.png",
-      "/images/works/service-quotation/interface-2.png",
-      "/images/works/service-quotation/interface-3.png",
+       "/images/works/service-quotation/cover.webp",
+      "/images/works/service-quotation/interface-1.webp",
+      "/images/works/service-quotation/interface-2.webp",
+      "/images/works/service-quotation/interface-3.webp",
     ],
     imageAlt:
       "Home Service Quotation web platform, administration panel and marketing website",
@@ -220,15 +221,15 @@ export const works: Work[] = [
       "PostgreSQL",
     ],
 
-    image: "/images/works/gadget-promotion/cover-1.png",
+    image: "/images/works/gadget-promotion/cover-1.webp",
     imageAlt: "Gadget Promotion mobile giveaway application screens",
 
     interfaceDisplay: "mobile",
 
     mobileScreens: [
-      "/images/works/gadget-promotion/cover-1.png",
-      "/images/works/gadget-promotion/cover-2.png",
-      "/images/works/gadget-promotion/cover-3.png",
+      "/images/works/gadget-promotion/cover-1.webp",
+      "/images/works/gadget-promotion/cover-2.webp",
+      "/images/works/gadget-promotion/cover-3.webp",
     ],
 
     overviewTitle:
@@ -272,12 +273,12 @@ export const works: Work[] = [
       "CMS",
     ],
 
-    image: "/images/works/artist-website/cover.png",
+    image: "/images/works/artist-website/cover.webp",
     imageAlt: "Artist portfolio website with artwork gallery and editorial layout",
     interfaceImages: [
-      "/images/works/artist-website/cover.png",
-      "/images/works/artist-website/interface-1.png",
-      "/images/works/artist-website/interface-2.png",
+      "/images/works/artist-website/cover.webp",
+      "/images/works/artist-website/interface-1.webp",
+      "/images/works/artist-website/interface-2.webp",
     ],
     overviewTitle:
       "A flexible portfolio website built to let a visual artist present and manage her work through a clean editorial experience.",

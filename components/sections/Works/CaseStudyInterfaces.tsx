@@ -52,23 +52,11 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
 
                 {isMobileInterface ? (
                     <div className="grid gap-10 md:grid-cols-3 md:items-start">
-                        {mobileScreens.map((screen, index) => {
-                            const caption = slides[index] ?? slides[0];
-
-                            return (
-                                <div key={screen}>
-                                    <div className="mx-auto mb-6 w-full max-w-[300px] sm:max-w-[340px] md:max-w-[280px] xl:max-w-[330px]">
-                                        <Iphone src={screen} className="h-full w-full" />
-                                    </div>
-                                    {caption ? (
-                                        <>
-                                            <p className="mb-2 font-label text-on-dark-subheading text-[11px] tracking-wide uppercase">{caption.title}</p>
-                                            <p className="font-body text-on-dark-subheading text-[13px]/[20px] italic">{caption.description}</p>
-                                        </>
-                                    ) : null}
+                        {mobileScreens.map((screen) => (
+                                <div key={screen} className="mx-auto w-full max-w-[300px] sm:max-w-[340px] md:max-w-[280px] xl:max-w-[330px]">
+                                    <Iphone src={screen} className="h-full w-full" />
                                 </div>
-                            );
-                        })}
+                        ))}
                     </div>
                 ) : (
                     <>
@@ -79,10 +67,6 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                             src={activeSlide.image}
                             alt={activeSlide.alt}
                             url={`${work.slug}.case`} />
-                        <div className="mt-4 flex items-start justify-between gap-10">
-                            <p className="font-label text-on-dark-subheading text-[11px] tracking-wide uppercase">{activeSlide.title}</p>
-                            <p className="max-w-[420px] text-right font-body text-on-dark-subheading text-[13px]/[20px] italic">{activeSlide.description}</p>
-                        </div>
                     </div>
 
                     <div className="grid grid-cols-3 items-start gap-6">
@@ -98,7 +82,7 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                                     aria-label={`Show ${item.title}`}
                                     onClick={() => setActiveIndex(index)}
                                 >
-                                    <div className={`mb-4 box-border border border-[rgba(242,239,231,0.12)] transition-colors ${isActive ? "ring-1 ring-inset ring-accent" : "group-hover:border-on-dark-subheading"}`}>
+                                    <div className={`box-border border border-[rgba(242,239,231,0.12)] transition-colors ${isActive ? "ring-1 ring-inset ring-accent" : "group-hover:border-on-dark-subheading"}`}>
                                         <Image
                                             className="cursor-pointer block h-[265px] w-full object-cover"
                                             src={item.image}
@@ -106,11 +90,6 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                                             height={265}
                                             alt={item.alt} />
                                     </div>
-                                    <div className="flex items-center gap-3">
-                                        <span className={`h-px w-8 ${isActive ? "bg-accent" : "bg-on-dark-subheading"}`} aria-hidden="true"></span>
-                                        <p className="font-label text-on-dark-subheading text-[11px] tracking-wide uppercase">{item.title}</p>
-                                    </div>
-                                    <p className="mt-2 font-body text-on-dark-subheading text-[13px]/[20px] italic">{item.description}</p>
                                 </button>
                             );
                         })}
@@ -121,13 +100,11 @@ export function CaseStudyInterfaces({ work }: CaseStudyInterfacesProps) {
                     {slides.map((item) => (
                         <div key={item.title}>
                             <Image
-                                className=" mb-4 h-auto w-full border border-[rgba(242,239,231,0.16)]"
+                                className="h-auto w-full border border-[rgba(242,239,231,0.16)]"
                                 src={item.image}
                                 width={920}
                                 height={620}
                                 alt={item.alt} />
-                            <p className="mb-2 font-label text-on-dark-subheading text-[11px] tracking-wide uppercase">{item.title}</p>
-                            <p className="font-body text-on-dark-subheading text-[13px]/[20px] italic">{item.description}</p>
                         </div>
                     ))}
                 </div>

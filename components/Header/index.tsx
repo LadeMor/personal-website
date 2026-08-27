@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu } from "lucide-react";
+import { AccentHoverLink } from "@/components/ui/AccentHoverLink";
 
 type NavLink = {
     label: string,
@@ -10,6 +12,7 @@ type NavLink = {
 }
 
 export function Header() {
+    const pathname = usePathname();
     const [isHidden, setIsHidden] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const lastScrollY = useRef(0);
@@ -18,9 +21,12 @@ export function Header() {
     const NAV_LINKS: NavLink[] = [
         { label: "Work", href: "#works" },
         { label: "About", href: "#about" },
-        { label: "Experience", href: "#experience" },
         { label: "Contact", href: "#contact" },
     ]
+
+    function getNavHref(href: string) {
+        return pathname === "/" ? href : `/${href}`;
+    }
 
     useEffect(() => {
         lastScrollY.current = window.scrollY;
@@ -59,9 +65,16 @@ export function Header() {
                     <nav className="hidden items-center gap-9 font-body color-body md:flex">
                         {
                             NAV_LINKS.map(link => (
-                                <Link className="font-label text-body tracking-wide" key={link.label} href={link.href}>
+                                <AccentHoverLink
+                                    key={link.label}
+                                    href={getNavHref(link.href)}
+                                    variant="light"
+                                    className="px-2 py-1"
+                                    labelClassName="font-label tracking-wide"
+                                    restColor="#3F3E39"
+                                >
                                     {link.label.toUpperCase()}
-                                </Link>
+                                </AccentHoverLink>
                             ))
                         }
                     </nav>
@@ -82,14 +95,18 @@ export function Header() {
                 >
                     {
                         NAV_LINKS.map(link => (
-                            <Link
-                                className="border-b border-muted py-3 font-label text-body text-[12px] tracking-wide"
+                            <AccentHoverLink
+                                className="w-full border-b border-muted py-3"
+                                contentClassName="w-full justify-start"
+                                labelClassName="font-label text-[12px] tracking-wide"
                                 key={link.label}
-                                href={link.href}
+                                href={getNavHref(link.href)}
+                                variant="light"
+                                restColor="#3F3E39"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.label.toUpperCase()}
-                            </Link>
+                            </AccentHoverLink>
                         ))
                     }
                 </nav>
