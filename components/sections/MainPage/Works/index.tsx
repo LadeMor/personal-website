@@ -79,18 +79,24 @@ export function Works() {
                         amount={0.15}
                         delay={0.08}
                     >
-                        {flamioWork.mobileScreens ? (
-                            <MobileScreensMockup
-                                className="h-[300px] w-full sm:h-[415px]"
-                                screens={flamioWork.mobileScreens}
-                                alt={flamioWork.imageAlt} />
-                        ) : (
-                            <DesktopMockup
-                                className="w-full"
-                                src={flamioWork.image}
-                                alt={flamioWork.imageAlt}
-                                url={`${flamioWork.slug}.case`} />
-                        )}
+                        <Link
+                            href={`/works/${flamioWork.slug}`}
+                            className="group block w-full cursor-pointer overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                            aria-label={`View ${flamioWork.title} case study`}
+                        >
+                            {flamioWork.mobileScreens ? (
+                                <MobileScreensMockup
+                                    className="h-[300px] w-full transition-transform duration-500 ease-out group-hover:scale-[1.035] group-focus-visible:scale-[1.035] motion-reduce:transform-none motion-reduce:transition-none sm:h-[415px]"
+                                    screens={flamioWork.mobileScreens}
+                                    alt={flamioWork.imageAlt} />
+                            ) : (
+                                <DesktopMockup
+                                    className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.035] group-focus-visible:scale-[1.035] motion-reduce:transform-none motion-reduce:transition-none"
+                                    src={flamioWork.image}
+                                    alt={flamioWork.imageAlt}
+                                    url={`${flamioWork.slug}.case`} />
+                            )}
+                        </Link>
                     </Reveal>
                 </div>
             </div>
@@ -109,18 +115,24 @@ export function Works() {
                         blur={2}
                         amount={0.15}
                     >
-                        {homeServiceWork.mobileScreens ? (
-                            <MobileScreensMockup
-                                className="h-[300px] w-full sm:h-[415px]"
-                                screens={homeServiceWork.mobileScreens}
-                                alt={homeServiceWork.imageAlt} />
-                        ) : (
-                            <DesktopMockup
-                                className="w-full"
-                                src={homeServiceWork.image}
-                                alt={homeServiceWork.imageAlt}
-                                url={`${homeServiceWork.slug}.case`} />
-                        )}
+                        <Link
+                            href={`/works/${homeServiceWork.slug}`}
+                            className="group block w-full cursor-pointer overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                            aria-label={`View ${homeServiceWork.title} case study`}
+                        >
+                            {homeServiceWork.mobileScreens ? (
+                                <MobileScreensMockup
+                                    className="h-[300px] w-full transition-transform duration-500 ease-out group-hover:scale-[1.035] group-focus-visible:scale-[1.035] motion-reduce:transform-none motion-reduce:transition-none sm:h-[415px]"
+                                    screens={homeServiceWork.mobileScreens}
+                                    alt={homeServiceWork.imageAlt} />
+                            ) : (
+                                <DesktopMockup
+                                    className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.035] group-focus-visible:scale-[1.035] motion-reduce:transform-none motion-reduce:transition-none"
+                                    src={homeServiceWork.image}
+                                    alt={homeServiceWork.imageAlt}
+                                    url={`${homeServiceWork.slug}.case`} />
+                            )}
+                        </Link>
                     </Reveal>
 
                     <Reveal

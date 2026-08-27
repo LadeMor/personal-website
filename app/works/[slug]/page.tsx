@@ -27,9 +27,21 @@ export async function generateMetadata({ params }: WorkCaseStudyPageProps) {
         };
     }
 
+    const title = `${work.title} Case Study`;
+
     return {
-        title: `${work.title} Case Study`,
+        title,
         description: work.description,
+        openGraph: {
+            type: "article",
+            title: `${title} | Serhii Piatko`,
+            description: work.description,
+        },
+        twitter: {
+            card: "summary",
+            title: `${title} | Serhii Piatko`,
+            description: work.description,
+        },
     };
 }
 

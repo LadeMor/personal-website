@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Work } from "@/data/works";
 import { DesktopMockup } from "@/components/ui/DesktopMockup";
 import { MobileScreensMockup } from "@/components/ui/MobileScreensMockup";
+import { AccentHoverLink } from "@/components/ui/AccentHoverLink";
 
 type CaseStudyHeroProps = {
     work: Work;
@@ -13,9 +13,15 @@ export function CaseStudyHero({ work }: CaseStudyHeroProps) {
     return (
         <section className="container min-h-[calc(100vh-61px)] border-t border-t-muted px-6 pt-10 pb-16 sm:px-10 sm:pt-12 lg:pb-20">
             <div className="mb-14 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center lg:mb-20">
-                <Link href="/works" className="border-b border-b-muted pb-1 font-label text-muted text-[12px] tracking-wide uppercase">
+                <AccentHoverLink
+                    href="/works"
+                    variant="light"
+                    className="border-b border-b-muted pb-1"
+                    labelClassName="font-label text-[12px] tracking-wide uppercase"
+                    restColor="#7A7871"
+                >
                     ← Back to Works
-                </Link>
+                </AccentHoverLink>
                 <p className="font-label text-muted text-[12px] tracking-wide uppercase">
                     {work.number} — {work.category}
                 </p>

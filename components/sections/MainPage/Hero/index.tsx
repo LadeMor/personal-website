@@ -47,7 +47,7 @@ export function Hero() {
                     >
                         <p className="pt-1 font-label text-muted text-[11px]/[16px] tracking-wide sm:pt-0 sm:text-[12px]">BUILDING DIGITAL</p>
                         <p className="font-body text-body text-[19px]/[31px] sm:text-[20px]/[30px] md:text-[22px]/[32px] lg:text-[19px]/[28px]">
-                            Frontend-focused full-stack developer working across web, mobile, product interfaces and interactive experiences.
+                            Product-minded Frontend Engineer building clear and scalable web and mobile products - from UX and architecture to production delivery.
                         </p>
                     </Reveal>
 

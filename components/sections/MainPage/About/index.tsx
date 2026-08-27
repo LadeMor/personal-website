@@ -66,21 +66,21 @@ export function About() {
                         amount={0.18}
                     >
                         <Image
-                            className="absolute bottom-18 z-1 h-[240px] w-[240px] sm:bottom-20 sm:h-[320px] sm:w-[320px]"
+                            className="absolute bottom-18 z-1 h-[240px] w-[240px] sm:bottom-20 sm:h-[320px] sm:w-[320px] xl:h-[360px] xl:w-[360px]"
                             src="/icons/photo_background_circle.svg"
                             width={320}
                             height={320}
                             alt=""
                             aria-hidden="true" />
-                        <div className="relative z-2 w-[270px] sm:w-[360px]">
+                        <div className="relative z-2 w-[270px] sm:w-[360px] xl:w-[400px]">
                             <Image
                                 className="h-auto w-full"
-                                src="/images/me.png"
+                                src="/images/me_V2.png"
                                 width={360}
                                 height={430}
                                 alt="Serhii Piatko portrait" />
                             <div
-                                className="pointer-events-none absolute inset-x-0 bottom-0 z-3 h-[12%] bg-gradient-to-b from-background-secondary/0 via-40% via-background-secondary/100 to-background-secondary"
+                                className="pointer-events-none absolute inset-x-0 bottom-0 z-3 h-[7%] bg-gradient-to-b from-background-secondary/0 via-70% via-background-secondary/100 to-background-secondary"
                                 aria-hidden="true" />
                         </div>
                     </Reveal>
@@ -147,10 +147,10 @@ function AboutText() {
     return (
         <>
             <p className="mb-7 font-body text-body text-[17px]/[30px] sm:text-[18px]/[31px]">
-                With a foundation in React and Next.js, I work across the full stack — from PostgreSQL schemas to pixel-perfect interfaces. I care deeply about how things feel to use, not just how they look.
+                I’m a frontend engineer who turns complex product requirements into clear, scalable interfaces. I work at the intersection of engineering, UX and product - shaping architecture, refining interactions and taking features from early concept to production.
             </p>
             <p className="font-body text-body text-[17px]/[30px] sm:text-[18px]/[31px]">
-                On the creative side, I explore Three.js, WebGL and motion — building interactive experiences that blur the line between software and art. On mobile, I ship cross-platform apps with React Native and Expo.
+                My core stack is React, Next.js and TypeScript. I also build mobile experiences with React Native and work with Node.js, PostgreSQL, Three.js and WebGL when the product calls for it.
             </p>
         </>
     );
