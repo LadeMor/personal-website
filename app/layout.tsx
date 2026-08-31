@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow_Condensed, Barlow, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { FlamioSDK } from "@/components/API/FlamioSDK";
 
 const barlow_condensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -76,6 +77,7 @@ export default function RootLayout({
       className={`${barlow_condensed.variable} ${barlow.variable} ${jetbrains_mono.variable} h-full antialiased`}
     >
       <body>
+        <FlamioSDK/>
         <Header />
         {children}
       </body>
